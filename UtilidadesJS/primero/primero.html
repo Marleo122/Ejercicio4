@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Comparador de Números</title>
+</head>
+<body>
+    <input type="number" id="numero1" placeholder="Ingrese el primer número">
+    <input type="number" id="numero2" placeholder="Ingrese el segundo número">
+    <button onclick="compararNumeros()">Comparar</button>
+    <p id="resultado"></p>
+
+    <script>
+        function compararNumeros() {
+            // Obtener los valores de los inputs
+            const numero1 = document.getElementById("numero1").value;
+            const numero2 = document.getElementById("numero2").value;
+
+            // Convertir los valores a números (ya que los inputs siempre devuelven strings)
+            const num1 = parseInt(numero1);
+            const num2 = parseInt(numero2);
+
+            // Comparar los números
+            if (num1 === num2) {
+                document.getElementById("resultado").textContent = "Los números son iguales.";
+            } else {
+                document.getElementById("resultado").textContent = "Los números son diferentes.";
+            }
+        }
+    </script>
+</body>
+</html>
